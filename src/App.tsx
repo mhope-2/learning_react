@@ -1,5 +1,6 @@
 import React from 'react'
 import {ContactCard, ContactCardProps} from "./components/contactcard/ContactCard"
+import { Form } from "./components/forms/Form"
 import contactData from './data/contactCardData'
 import './App.css';
 import axios from 'axios';
@@ -43,6 +44,9 @@ class App extends React.Component<{}, ApplicationState>{
           isLoading: false
         })
       })
+    .catch(err =>{
+      console.log(err)
+    })
 
 
 
@@ -120,8 +124,11 @@ class App extends React.Component<{}, ApplicationState>{
     return (
       <div>
         {this.state.isLoading ? <p>Loading...</p> : contactDataItems }
-        {this.state.isLoading ? <p>Loading...</p> : this.state.character.name}
+        {this.state.isLoading ? <p>Loading...</p> : this.state.character.name}<br/>
+
+        <Form firstName="" lastName="" bio="" isChecked={false} /><br/><br/>
       </div>
+      
     )
   }
     
