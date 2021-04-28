@@ -126,7 +126,7 @@ class App extends React.Component<{}, ApplicationState>{
         {this.state.isLoading ? <p>Loading...</p> : contactDataItems }
         {this.state.isLoading ? <p>Loading...</p> : this.state.character.name}<br/>
 
-        <Form firstName="" lastName="" bio="" isChecked={false} /><br/><br/>
+        <Form firstName="" lastName="" bio="" isChecked={false} gender="" favColor=""/><br/><br/>
       </div>
       
     )
